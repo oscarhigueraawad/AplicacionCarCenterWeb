@@ -9,3 +9,5 @@ El Script de la Base de Datos esta en la carpeta de SCRIPT DATABASE y esta hecho
 
 Es una especificación de manejo de Desarrollo FULL STACK.
 
+El proyecto esta en la rama MASTER.
+
