@@ -1,0 +1,46 @@
+<div class="abs-center">
+    <div *ngIf="currentCliente" class="edit-form">
+        <h4>Tutorial</h4>
+        <form>
+            <br><br>
+            <div class="form-group">
+                <label for="Documento">Documento</label>
+                <input type="text" class="form-control" id="Documento" [(ngModel)]="currentCliente.Documento"
+                    name="Documento" />
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label for="PrimerNombre">Nombre Cliente</label>
+                <input type="text" class="form-control" id="PrimerNombre" [(ngModel)]="currentCliente.PrimerNombre"
+                    name="PrimerNombre" />
+            </div>
+            <br><br>
+            <div class="form-group">
+                <label><strong>Status:</strong></label>
+                {{ published ? "Published" : "Pending" }}
+            </div>
+        </form>
+        <br><br>
+        <br><br>
+        <button class="badge badge-primary mr-2" *ngIf="published" (click)="updatePublished(false)">
+            UnPublish
+        </button>
+        <button *ngIf="!published" class="badge badge-primary mr-2" (click)="updatePublished(true)">
+            Publish
+        </button>
+        <br><br>
+        <button class="badge badge-danger mr-2" (click)="deleteCliente()">
+            Delete
+        </button>
+        <br><br>
+        <button type="submit" class="badge badge-success" (click)="updateCliente()">
+            Update
+        </button>
+        <p>{{ message }}</p>
+    </div>
+    <br><br>
+    <div *ngIf="!currentCliente">
+        <br />
+        <p>No puede acceder este Cliente.....</p>
+    </div>
+</div>

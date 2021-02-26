@@ -1,0 +1,68 @@
+<!-- <div class="abs-center">
+    <mat-card class="contact-card">
+        <mat-card-content>
+            <form novalidate  #f="ngForm">
+                <div class="list row">
+                    <div class="col-md-12">
+                        <div *ngIf="currentCliente">
+                            <h4>Clientes</h4>
+                            <mat-form-field>
+                                <label><strong>Documento:</strong></label> {{ currentCliente.Documento }}
+
+                                <label><strong>PrimerNombre:</strong></label>
+                                {{ currentCliente.PrimerNombre }}
+
+                                <label><strong>SegundoNombre:</strong></label>
+                                {{ currentCliente.SegundoNombre }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <label><strong>PrimerApellido:</strong></label>
+                                {{ currentCliente.PrimerApellido }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <label><strong>SegundoApellido:</strong></label>
+                                {{ currentCliente.SegundoApellido }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <label><strong>NoCelular:</strong></label>
+                                {{ currentCliente.NoCelular }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <label><strong>Direccion:</strong></label>
+                                {{ currentCliente.Direccion }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <label><strong>Status:</strong></label>
+                                {{ publishing ? "Published" : "Pending" }}
+                            </mat-form-field>
+
+                            <mat-form-field>
+                                <a mat-raised-button class="badge badge-warning" color="primary"
+                                    routerLink="/listclientes/{{ currentCliente.Documento }}">
+                                    Editar
+                                </a>
+                            </mat-form-field>
+                        </div>
+
+                        <div *ngIf="!currentCliente">
+                            <br />
+                            <p>Please click on a Cliente...</p>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div> -->
+
+<ag-grid-angular [pagination]="true" 
+style="width: 1000px; height: 400px;" 
+class="ag-theme-balham"
+    [rowData]="rowData"
+    [columnDefs]="columnDefs">
+</ag-grid-angular>

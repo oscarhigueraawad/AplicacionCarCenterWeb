@@ -1,0 +1,70 @@
+<div class="abs-center">
+  <mat-card class="contact-card">
+    <mat-card-header>
+      <mat-card-title>{{ title }}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <form novalidate  #f="ngForm">
+        <div class=" submit-form">
+          <div *ngIf="!submitted">
+            <mat-form-field>
+              <input matInput type="text" placeholder="Documento" class="form-control" name="Documento" required
+                id="Documento" [(ngModel)]="clientes.Documento">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput type="text" placeholder="Tipo Documento" class="form-control" name="TipoDocumento"
+                required id="TipoDocumento" [(ngModel)]="clientes.TipoDocumento">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Primer Nombre" class="form-control" name="PrimerNombre" required
+                id="PrimerNombre" [(ngModel)]="clientes.PrimerNombre">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Segundo Nombre" class="form-control" name="SegundoNombre" required
+                id="SegundoNombre" [(ngModel)]="clientes.SegundoNombre">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Primer Apellido" class="form-control" name="PrimerApellido" required
+                id="PrimerApellido" [(ngModel)]="clientes.PrimerApellido">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Segundo Apellido" class="form-control" name="SegundoApellido" required
+                id="SegundoApellido" [(ngModel)]="clientes.SegundoApellido">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="No Celular" class="form-control" name="NoCelular" required id="NoCelular"
+                [(ngModel)]="clientes.NoCelular">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Dirección" class="form-control" name="Direccion" required id="Direccion"
+                [(ngModel)]="clientes.Direccion">
+            </mat-form-field>
+            <br>
+            <mat-form-field>
+              <input matInput placeholder="Correo Electronico" class="form-control" name="CorreoElectronico" required
+                id="CorreoElectronico" [(ngModel)]="clientes.CorreoElectronico">
+            </mat-form-field>
+            <br>
+            <br>
+            <div class="btn-group" role="group">
+              <button (click)="saveClientes()" id="submit" mat-raised-button type="submit"
+              [disabled]="f.invalid"  color="primary">Guardar</button>
+            </div>
+          </div>
+
+          <div *ngIf="submitted">
+            <h4>Adicionado Exitoxamente!</h4>
+            <button   class="btn btn-success" (click)="newClientes()">Add</button>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

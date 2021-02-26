@@ -1,0 +1,10 @@
+.abs-left {
+    display: flex;
+    align-items: top;
+    justify-content: left;
+    min-height: 100vh;
+  }
+  
+  .form {
+    width: 450px;
+  }
